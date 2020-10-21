@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E1D5185253FAE0B00DF4D1E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1D5184253FAE0B00DF4D1E /* ImagePicker.swift */; };
 		8E6C74F42532B39E00B37877 /* FinalProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6C74F32532B39E00B37877 /* FinalProjectApp.swift */; };
 		8E6C74F62532B39E00B37877 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6C74F52532B39E00B37877 /* ContentView.swift */; };
 		8E6C74F82532B3A100B37877 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E6C74F72532B3A100B37877 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 		8E6C752A2537AD8600B37877 /* AddProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6C75292537AD8600B37877 /* AddProductView.swift */; };
 		8E6C752F2537B3D400B37877 /* HomeViewCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6C752E2537B3D400B37877 /* HomeViewCustomer.swift */; };
 		8E6C7534253A7D4D00B37877 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6C7533253A7D4D00B37877 /* CartView.swift */; };
+		8EB36C66253FC31600C9DE28 /* CheckOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB36C65253FC31500C9DE28 /* CheckOutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E1D5184253FAE0B00DF4D1E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		8E6C74F02532B39E00B37877 /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E6C74F32532B39E00B37877 /* FinalProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalProjectApp.swift; sourceTree = "<group>"; };
 		8E6C74F52532B39E00B37877 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 		8E6C75292537AD8600B37877 /* AddProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductView.swift; sourceTree = "<group>"; };
 		8E6C752E2537B3D400B37877 /* HomeViewCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCustomer.swift; sourceTree = "<group>"; };
 		8E6C7533253A7D4D00B37877 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		8EB36C65253FC31500C9DE28 /* CheckOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,10 +112,12 @@
 				8E6C75292537AD8600B37877 /* AddProductView.swift */,
 				8E6C74F52532B39E00B37877 /* ContentView.swift */,
 				8E6C75212532B5BA00B37877 /* HomeView.swift */,
+				8E1D5184253FAE0B00DF4D1E /* ImagePicker.swift */,
 				8E6C74F72532B3A100B37877 /* Assets.xcassets */,
 				8E6C74FC2532B3A100B37877 /* Info.plist */,
-				8E6C74F92532B3A100B37877 /* Preview Content */,
 				8E6C7533253A7D4D00B37877 /* CartView.swift */,
+				8E6C74F92532B3A100B37877 /* Preview Content */,
+				8EB36C65253FC31500C9DE28 /* CheckOutView.swift */,
 			);
 			path = FinalProject;
 			sourceTree = "<group>";
@@ -274,8 +280,10 @@
 				8E6C7534253A7D4D00B37877 /* CartView.swift in Sources */,
 				8E6C752A2537AD8600B37877 /* AddProductView.swift in Sources */,
 				8E6C75222532B5BA00B37877 /* HomeView.swift in Sources */,
+				8E1D5185253FAE0B00DF4D1E /* ImagePicker.swift in Sources */,
 				8E6C74F62532B39E00B37877 /* ContentView.swift in Sources */,
 				8E6C752F2537B3D400B37877 /* HomeViewCustomer.swift in Sources */,
+				8EB36C66253FC31600C9DE28 /* CheckOutView.swift in Sources */,
 				8E6C74F42532B39E00B37877 /* FinalProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

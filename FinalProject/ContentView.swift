@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isCorrect: Bool = false
+    @State private var isCorrect: Bool = false //for customers only
     @State private var showAlert: Bool = false
     @State private var password: String = ""
     @State private var username: String = ""
     let correctUsername: String = "username"
     let correctPassword: String = "password"
     @State private var isAdmin: Bool = false
+    
+    @State private var createNewAccount = false
     
     var body: some View {
         NavigationView {
@@ -24,17 +26,13 @@ struct ContentView: View {
                 TextField("Username: ", text: $username).autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
                 SecureField("Enter a password", text: $password)
                 
-//                NavigationLink(destination: HomeView()) {
-//                                    Text("Log in")
-//                                }.disabled(!self.check())
-
                 NavigationLink(destination: HomeView(), isActive: $isAdmin) {
                     Text("")
                 }
                 Button(action: {
                     if(self.username == "admin") {
                         self.isAdmin = true
-                        self.isCorrect = true
+                        //self.isCorrect = true
                     }
                     else if (self.username == self.correctUsername && self.password == self.correctPassword) {
                         self.isCorrect = true
@@ -54,6 +52,8 @@ struct ContentView: View {
                 NavigationLink(destination: HomeViewCustomer(), isActive: $isCorrect) {
                         Text("")
                 }
+                
+                
                    
             }
             

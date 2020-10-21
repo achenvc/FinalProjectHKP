@@ -11,18 +11,18 @@ struct HomeViewCustomer: View {
     @State private var showingCart = false
     @State private var showingBuyProduct = false
     @ObservedObject var products = Products()
-    //this is homeview for managers
+    @State private var addedProducts = Products()
+    
     var body: some View {
         
         NavigationView {
             List {
                 ForEach(products.items, id: \.id) { item in
-                    //Text(item.name)
-                    NavigationLink(destination: HomeView(), isActive: $showingBuyProduct) {
-                        Text("")
-                    }
+//                    NavigationLink(destination: CartView(products: products)) {
+//                        Text(item.name)
+//                    }
                     Button(action: {
-                        self.showingBuyProduct = true
+                        addedProducts.addProduct(productItem: item)
                     }) {
                         Text(item.name)
                     }
@@ -32,27 +32,16 @@ struct HomeViewCustomer: View {
             .navigationBarTitle("Products on Sale!")
             .navigationBarItems(trailing:
                 HStack (spacing: 250) {
-                    Button(action: {
-                        self.showingBuyProduct = true
-                    }) {
-                        Image(systemName: "plus")
-                    }
                     
-                    Button(action: {
-                       self.showingCart = true
-                    }) {
+                    NavigationLink(destination: CartView(products: addedProducts)) {
                         Image(systemName: "cart")
                     }
+                    
                 }
                 
             
             )
-            .sheet(isPresented: $showingCart) {
-                //AddProductView(products: self.products)
-            }
-            .sheet(isPresented: $showingBuyProduct) {
-                 
-            }
+           
             
         }
         

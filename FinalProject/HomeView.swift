@@ -7,12 +7,22 @@
 
 import SwiftUI
 
+
 struct ProductItem: Identifiable, Codable {
     let id = UUID()
     let name: String
     let description: String
     let amount: Int
-    
+    //let picture: SomeImage
+}
+
+public struct SomeImage: Codable {
+
+    public let photo: Data
+
+    public init(photo: UIImage) {
+        self.photo = photo.pngData()!
+    }
 }
 
 class Products: ObservableObject {
@@ -23,6 +33,9 @@ class Products: ObservableObject {
                 UserDefaults.standard.set(encoded, forKey: "Items")
             }
         }
+    }
+    func addProduct(productItem: ProductItem) {
+        items.append(productItem)
     }
     init() {
         if let items = UserDefaults.standard.data(forKey: "Items") {
@@ -40,6 +53,7 @@ class Products: ObservableObject {
 struct HomeView: View {
     @State private var showingAddProduct = false
     @ObservedObject var products = Products()
+    
     //this is homeview for managers
     var body: some View {
         
